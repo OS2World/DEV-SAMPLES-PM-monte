@@ -1,0 +1,17 @@
+# makefile for IPC.EXE
+cc   = icc /c /gd- /se /re /ss /ms /gm+ /ti+ /q+ /kb+
+link = link386 /nod /cod /map /pmtype:vio
+libs = dde4mbs os2386
+
+all: ipc.exe
+
+ipc.exe: ipc.obj
+  $(link)  ipc,,, $(libs);
+
+ipc.obj: ipc.c
+  $(cc) ipc.c
+
+
+
+
+

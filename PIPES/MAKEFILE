@@ -1,0 +1,23 @@
+# makefile for pipes: HOST.EXE and CLIENT.EXE
+cc   = icc /c /gd- /re /ss /ms /gm+ /ti+ /q+ /Sm /kb+
+link = link386 /nod /cod /map /pmtype:vio
+libs = dde4mbs dde4mbm os2386
+
+all: client.exe  host.exe
+
+client.exe: client.obj
+  $(link) client,,, $(libs);
+
+host.exe: host.obj
+  $(link) host,,, $(libs);
+
+client.obj: client.c
+  $(cc) client.c
+
+host.obj: host.c
+  $(cc) host.c
+
+
+
+
+

@@ -1,0 +1,13 @@
+#include "os2.h"
+#include "def.h"
+
+POINTER ID_APP THREADS.ICO
+
+MENU ID_APP
+BEGIN
+  SUBMENU    "Actions",                 IDM_ACTIONS,            MIS_TEXT
+  BEGIN
+    MENUITEM "Sleep & Beep",            IDM_SLEEP,              MIS_TEXT
+  END
+END
+

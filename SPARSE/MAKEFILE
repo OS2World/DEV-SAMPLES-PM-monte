@@ -1,0 +1,17 @@
+# makefile for SPARSE.EXE
+cc   = icc /c /gd- /se /re /ss /ms /gm+ /ti+ /q+ /kb+
+link = link386 /nod /cod /map /pmtype:vio
+libs = dde4mbs + os2386
+
+all: SPARSE.exe
+
+SPARSE.exe: sparse.obj
+  $(link)  sparse,,, $(libs);
+
+SPARSE.obj: sparse.c
+  $(cc) sparse.c
+
+
+
+
+

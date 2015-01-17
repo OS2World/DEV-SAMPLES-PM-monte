@@ -1,0 +1,17 @@
+# makefile for TERM.EXE
+cc   = icc /c /gd- /se /re /ss /ms /gm+ /ti+ /q+ /kb+
+link = link386 /nod /cod /map /pmtype:vio
+libs = dde4mbs os2386
+
+all: term.exe
+
+term.exe: term.obj
+  $(link)  term.obj,,, $(libs);
+
+term.obj: term.c
+  $(cc) term.c
+
+
+
+
+

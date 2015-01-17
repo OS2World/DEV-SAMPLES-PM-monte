@@ -1,0 +1,17 @@
+# makefile for SUBALLOC.EXE
+cc   = icc /c /gd- /se /re /ss /ms /gm+ /ti+ /q+ /kb+
+link = link386 /nod /cod /map /pmtype:vio
+libs = dde4mbs os2386
+
+all: SUBALLOC.exe
+
+SUBALLOC.exe: SUBALLOC.obj
+  $(link)  SUBALLOC,,, $(libs);
+
+SUBALLOC.obj: SUBALLOC.c
+  $(cc) SUBALLOC.c
+
+
+
+
+

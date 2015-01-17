@@ -1,0 +1,23 @@
+# makefile for APP.EXE
+CC   = icc /c /gd- /re /ss /ms /gm+ /ti+ /q+ /Sm /kb+
+LINK = link386 /nod /cod /map
+LIBS = DDE4MBS + os2386
+H    = app.h def.h
+OBJ  = app.obj object.obj
+
+all: app.exe
+
+app.exe: $(OBJ) app.res app.def
+  $(LINK)  $(OBJ) ,,, $(LIBS) , $*
+  rc app.res
+
+app.res: $*.rc def.h threads.ico
+  rc -r $*.rc
+
+app.obj: $*.c $(H)
+  $(CC) $*.c
+
+object.obj: $*.c $(H)
+  $(CC) $*.c
+
+
