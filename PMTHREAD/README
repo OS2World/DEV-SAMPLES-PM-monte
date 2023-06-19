@@ -1,4 +1,4 @@
-
+Sample sample as: https://github.com/OS2World/DEV-SAMPLES-The-IBM-Developer-Connection-Release-2--Volume-2_CD4/tree/master/devnewsa
 
 
 
@@ -31,10 +31,10 @@ Therefore, PM apps must return from their window procedures in a timely
 manner; one-tenth second is recommended.  It is known as the one-tenth-second
 rule.  When an application takes too long, the symptoms include:
 
-þ   user unable to minimize the application
-þ   user unable to switch to another application
-þ   hourglass pointer over entire desktop
-þ   the system dialog: "Application is not responding to system requests.
+Ã¾   user unable to minimize the application
+Ã¾   user unable to switch to another application
+Ã¾   hourglass pointer over entire desktop
+Ã¾   the system dialog: "Application is not responding to system requests.
     Press Enter to end it."
 
 
